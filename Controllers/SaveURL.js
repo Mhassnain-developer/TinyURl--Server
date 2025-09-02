@@ -1,10 +1,10 @@
-import {URLs} from "../models/url.js";
+import URLs from "../models/url.js";
 
 export const SaveURL = async (req,res) => {
     const {longUrl} = req.body;
 
     try{
-        const newURL = new URLs ({longUrl: longUrl});
+        const newURL = new URLs({longUrl: longUrl});
         const savedRef = await newURL.save();
         const shortURLId = savedRef._id;
         const shortURL = `${process.env.ServerURL}/url/${shortURLId}`;

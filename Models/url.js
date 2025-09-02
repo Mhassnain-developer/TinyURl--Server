@@ -1,10 +1,11 @@
 import mongoose from "mongoose";
 
 const URLSchema = mongoose.Schema({
-    longUrl:{
-        type:String,
-        required:true,
+    longUrl: {
+        type: String,
+        required: true,
     },
 });
 
-export const URLs = mongoose.model("url", URLSchema);
+const URLs = mongoose.model("url", URLSchema);
+export default URLs

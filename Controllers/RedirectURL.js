@@ -1,5 +1,4 @@
-import { URLs } from "../models/url.js";
-
+import URLs from "../models/url.js";
 
 export const RedirectURL = async (req,res) => {
     const {shortId} = req.params;
